@@ -1,0 +1,9 @@
+{
+	"name": "adf75011dd01",
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "451ee8ed-c592-4f55-bcaa-a18e623b8b7d",
+		"tenantId": "c371d4f5-b34f-4b06-9e66-517fed904220"
+	}
+}
