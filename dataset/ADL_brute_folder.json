@@ -5,6 +5,12 @@
 			"referenceName": "ADL75011dd01",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"filename": {
+				"type": "string",
+				"defaultValue": "filename"
+			}
+		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {

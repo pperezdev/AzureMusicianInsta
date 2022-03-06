@@ -34,14 +34,13 @@
 							"userProperties": [],
 							"typeProperties": {
 								"source": {
-									"type": "DelimitedTextSource",
+									"type": "BinarySource",
 									"storeSettings": {
 										"type": "AzureBlobFSReadSettings",
-										"recursive": true,
-										"enablePartitionDiscovery": false
+										"recursive": true
 									},
 									"formatSettings": {
-										"type": "DelimitedTextReadSettings"
+										"type": "BinaryReadSettings"
 									}
 								},
 								"sink": {
@@ -54,7 +53,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "ADL_instagram_profil",
+									"referenceName": "ADL_instagram_binaire_param",
 									"type": "DatasetReference",
 									"parameters": {
 										"filename": {
