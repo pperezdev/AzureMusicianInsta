@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "01_INGESTION_DATA",
+						"referenceName": "01_PL_INGESTION_DATA",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
