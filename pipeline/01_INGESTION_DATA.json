@@ -1,6 +1,31 @@
 {
 	"name": "01_INGESTION_DATA",
 	"properties": {
+		"activities": [
+			{
+				"name": "execute script",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.00:30:00",
+					"retry": 3,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": {
+						"value": "@pipeline().globalParameters.path_databricks_main",
+						"type": "Expression"
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "adb75011dd01",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
 		"annotations": []
 	}
 }

@@ -3,26 +3,56 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "execute script",
-				"type": "DatabricksNotebook",
+				"name": "Execute Pipeline1",
+				"type": "ExecutePipeline",
 				"dependsOn": [],
-				"policy": {
-					"timeout": "0.00:30:00",
-					"retry": 3,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": {
-						"value": "@pipeline().globalParameters.path_databricks_main",
-						"type": "Expression"
+					"pipeline": {
+						"referenceName": "01_INGESTION_DATA",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Execute Pipeline2",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Execute Pipeline1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
 					}
-				},
-				"linkedServiceName": {
-					"referenceName": "adb75011dd01",
-					"type": "LinkedServiceReference"
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "02_PL_MOVE_CSV_TO_SQL",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Execute Pipeline3",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Execute Pipeline2",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "03_PL_MOVE_TEMPORARY_TO_BRUTES",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
 				}
 			}
 		],
