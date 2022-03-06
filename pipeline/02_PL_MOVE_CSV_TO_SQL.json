@@ -96,7 +96,13 @@
 							"outputs": [
 								{
 									"referenceName": "ADL_brute_folder",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"filename": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
