@@ -44,6 +44,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Get all files').output.childItems",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "Copy CSV to SQL",
