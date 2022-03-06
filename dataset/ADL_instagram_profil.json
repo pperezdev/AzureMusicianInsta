@@ -1,0 +1,20 @@
+{
+	"name": "ADL_instagram_profil",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADL75011dd01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
