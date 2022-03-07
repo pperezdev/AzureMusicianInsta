@@ -13,6 +13,7 @@ provider "azurerm" {
     key_vault {
         purge_soft_delete_on_destroy = true
     }
+    subscription_id = "f577cd82-810c-43f9-a1f6-0cc532871050"
   }
 }
 
