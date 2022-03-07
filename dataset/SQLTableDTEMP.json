@@ -1,0 +1,33 @@
+{
+	"name": "SQLTableDTEMP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "db75011dd01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "biography",
+				"type": "varchar"
+			},
+			{
+				"name": "edge_follow",
+				"type": "varchar"
+			},
+			{
+				"name": "edge_followed_by_count",
+				"type": "varchar"
+			},
+			{
+				"name": "fullname",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "D_TEMP"
+		}
+	}
+}
