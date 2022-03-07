@@ -54,26 +54,6 @@
 					},
 					"waitOnCompletion": true
 				}
-			},
-			{
-				"name": "Execute Pipeline 4",
-				"type": "ExecutePipeline",
-				"dependsOn": [
-					{
-						"activity": "Execute Pipeline3",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"pipeline": {
-						"referenceName": "04_PL_DISPATCH_D_TEMP",
-						"type": "PipelineReference"
-					},
-					"waitOnCompletion": true
-				}
 			}
 		],
 		"annotations": []
