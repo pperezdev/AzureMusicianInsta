@@ -1,13 +1,5 @@
 {
 	"name": "adf75011dd01",
-	"properties": {
-		"globalParameters": {
-			"path_databricks_main": {
-				"type": "string",
-				"value": "/Notebook/Industrialisation/main"
-			}
-		}
-	},
 	"location": "northeurope",
 	"identity": {
 		"type": "SystemAssigned",
