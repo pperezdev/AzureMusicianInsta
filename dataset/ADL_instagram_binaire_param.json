@@ -16,7 +16,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "temporaires",
 				"fileSystem": "data"
 			}
 		}
