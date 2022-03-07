@@ -1,0 +1,19 @@
+{
+	"name": "db75011dd01",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=sqldb75011dd01.database.windows.net;Initial Catalog=db75011dd01;User ID=sqldb75011dd01-admin",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "akv75011dd01",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sqldb75011dd01-admin",
+				"secretVersion": "eabc8287954a4f4d88207d10de2ecdbe"
+			}
+		}
+	}
+}
