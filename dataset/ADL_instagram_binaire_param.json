@@ -19,7 +19,8 @@
 				"fileName": {
 					"value": "@dataset().filename",
 					"type": "Expression"
-				}
+				},
+				"fileSystem": "data"
 			}
 		}
 	}
