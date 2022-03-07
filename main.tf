@@ -14,6 +14,7 @@ provider "azurerm" {
         purge_soft_delete_on_destroy = true
     }
     subscription_id = "f577cd82-810c-43f9-a1f6-0cc532871050"
+    tenant_id = "f577cd82-810c-43f9-a1f6-0cc532871050"
   }
 }
 
