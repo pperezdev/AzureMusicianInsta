@@ -30,6 +30,13 @@ resource "azurerm_virtual_network" "example" {
   address_space       = ["10.0.0.0/16"]
 }
 
+data "azurerm_client_config" "current" {
+}
+
+output "account_id" {
+  value = data.azurerm_client_config.current.client_id
+}
+
 resource "azurerm_key_vault" "example" {
   name                        = "akv75011dd01"
   location                    = azurerm_resource_group.example.location
@@ -71,7 +78,7 @@ resource "azurerm_storage_account" "example" {
   network_rules {
     default_action             = "Deny"
     ip_rules                   = ["100.0.0.1"]
-    virtual_network_subnet_ids = [azurerm_subnet.example.id]
+    virtual_network_subnet_ids = [azurerm_virtual_network.example.id]
   }
 
   tags = {
